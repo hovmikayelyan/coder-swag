@@ -1,7 +1,7 @@
 # coder-swag
 A simple iOS App with the basics of working with data in iOS. Data is the key ingredient for any functional app and one must learn how to properly display it to the user. 
 
-While making thsi app, I learned how to use tables and collection views to display data to users.
+While making this app, I learned how to use tables and collection views to display data to users.
 
 Learning Objectives
 
