@@ -2,8 +2,7 @@
 //  Product.swift
 //  coder-swag
 //
-//  Created by Hovhannes Mikayelyan on 5/25/22.
-//  Copyright © 2022 Hovhannes Mikayelyan. All rights reserved.
+//  Created by Hovhannes Mikayelyan on 16.08.22.
 //
 
 import Foundation

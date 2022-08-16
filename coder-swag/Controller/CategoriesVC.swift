@@ -1,15 +1,14 @@
 //
-//  CategoriesVC.swift
+//  ViewController.swift
 //  coder-swag
 //
-//  Created by Hovhannes Mikayelyan on 5/25/22.
-//  Copyright © 2022 Hovhannes Mikayelyan. All rights reserved.
+//  Created by Hovhannes Mikayelyan on 13.08.22.
 //
 
 import UIKit
 
-class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class CategoriesVC: UIViewController {
+
     @IBOutlet weak var categoryTable: UITableView!
     
     override func viewDidLoad() {
@@ -17,37 +16,28 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         categoryTable.dataSource = self
         categoryTable.delegate = self
     }
-    
+
+
+}
+
+extension CategoriesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.getCategories().count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell") as? CategoryCell {
             let category = DataService.instance.getCategories()[indexPath.row]
-            cell.updateViews(category: category)
+            cell.updateView(category: category)
             return cell
-        }
-        else{
+        } else {
             return CategoryCell()
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let category = DataService.instance.getCategories()[indexPath.row]
-        performSegue(withIdentifier: "ProductsVC", sender: category)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let productsVC = segue.destination as? ProductsVC {
-            let barBtn = UIBarButtonItem()
-            barBtn.title = ""
-            navigationItem.backBarButtonItem = barBtn
-            
-            assert(sender as? Category != nil)
-            productsVC.initProducts(category: sender as! Category)
-        }
-    }
-    
-}
 
+
+}
