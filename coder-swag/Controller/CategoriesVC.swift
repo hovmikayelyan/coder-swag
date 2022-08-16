@@ -17,7 +17,6 @@ class CategoriesVC: UIViewController {
         categoryTable.delegate = self
     }
 
-
 }
 
 extension CategoriesVC: UITableViewDelegate, UITableViewDataSource {
@@ -39,7 +38,6 @@ extension CategoriesVC: UITableViewDelegate, UITableViewDataSource {
         return 150
     }
 
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = DataService.instance.getCategories()[indexPath.row]
         performSegue(withIdentifier: "ProductsVC", sender: category)
