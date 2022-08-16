@@ -38,7 +38,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-3c-niv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
+                                                    <rect key="frame" x="0.0" y="5" width="375" height="112"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ag-dW-r5f">
                                                     <rect key="frame" x="129.5" y="43.5" width="116" height="35"/>
@@ -48,9 +48,9 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gvB-3c-niv" secondAttribute="bottom" id="EsK-7V-B4R"/>
+                                                <constraint firstAttribute="bottom" secondItem="gvB-3c-niv" secondAttribute="bottom" constant="5" id="EsK-7V-B4R"/>
                                                 <constraint firstItem="9Ag-dW-r5f" firstAttribute="centerY" secondItem="Yf0-cM-FLC" secondAttribute="centerY" id="HVr-7v-egs"/>
-                                                <constraint firstItem="gvB-3c-niv" firstAttribute="top" secondItem="Yf0-cM-FLC" secondAttribute="top" id="Iuf-5b-OXX"/>
+                                                <constraint firstItem="gvB-3c-niv" firstAttribute="top" secondItem="Yf0-cM-FLC" secondAttribute="top" constant="5" id="Iuf-5b-OXX"/>
                                                 <constraint firstAttribute="trailing" secondItem="gvB-3c-niv" secondAttribute="trailing" id="ecU-1I-WuW"/>
                                                 <constraint firstItem="9Ag-dW-r5f" firstAttribute="centerX" secondItem="Yf0-cM-FLC" secondAttribute="centerX" id="oaP-GA-202"/>
                                                 <constraint firstItem="gvB-3c-niv" firstAttribute="leading" secondItem="Yf0-cM-FLC" secondAttribute="leading" id="zDa-D9-3ad"/>
@@ -77,17 +77,17 @@
                     <navigationItem key="navigationItem" title="CODER SWAG" id="4xI-HT-BBy"/>
                     <connections>
                         <outlet property="categoryTable" destination="ilX-Ex-wt8" id="RHr-Li-Nbm"/>
-                        <segue destination="q08-Gf-4V7" kind="show" id="Nu9-nX-o4M"/>
+                        <segue destination="q08-Gf-4V7" kind="show" identifier="ProductsVC" id="Nu9-nX-o4M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959.20000000000005" y="97.601199400299862"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="VQN-Pp-TUz">
             <objects>
-                <viewController id="q08-Gf-4V7" sceneMemberID="viewController">
+                <viewController id="q08-Gf-4V7" customClass="ProductsVC" customModule="coder_swag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XRE-4O-t3h"/>
                         <viewControllerLayoutGuide type="bottom" id="lex-La-IyY"/>
@@ -116,10 +116,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Rv6-Hh-4As" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productCell" id="Rv6-Hh-4As" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="177" height="242"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CrF-Me-fhr">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UeG-ay-r30">
                                             <rect key="frame" x="0.0" y="0.0" width="177" height="242"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -131,25 +131,33 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devslopes logo graphic design" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jU8-tI-q7O">
                                                     <rect key="frame" x="8" y="136" width="161" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="161" id="m26-bd-Hfd"/>
+                                                        <constraint firstAttribute="height" constant="44" id="q6R-wD-rJT"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yn2-gI-pwm">
                                                     <rect key="frame" x="8" y="196" width="161" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="bLg-0F-VRa"/>
+                                                        <constraint firstAttribute="width" constant="161" id="dqj-dd-DGr"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Yn2-gI-pwm" firstAttribute="leading" secondItem="CrF-Me-fhr" secondAttribute="leadingMargin" id="32T-1M-q0C"/>
+                                                <constraint firstItem="Yn2-gI-pwm" firstAttribute="leading" secondItem="UeG-ay-r30" secondAttribute="leadingMargin" id="32T-1M-q0C"/>
                                                 <constraint firstItem="jU8-tI-q7O" firstAttribute="top" secondItem="juK-CF-93n" secondAttribute="bottom" constant="8" id="3Nw-ji-uDq"/>
-                                                <constraint firstItem="juK-CF-93n" firstAttribute="leading" secondItem="CrF-Me-fhr" secondAttribute="leading" id="5b1-g9-3Ls"/>
+                                                <constraint firstItem="juK-CF-93n" firstAttribute="leading" secondItem="UeG-ay-r30" secondAttribute="leading" id="5b1-g9-3Ls"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Yn2-gI-pwm" secondAttribute="bottom" constant="16" id="CjZ-lX-CMt"/>
-                                                <constraint firstItem="jU8-tI-q7O" firstAttribute="leading" secondItem="CrF-Me-fhr" secondAttribute="leadingMargin" id="Iu9-Se-PA9"/>
+                                                <constraint firstItem="jU8-tI-q7O" firstAttribute="leading" secondItem="UeG-ay-r30" secondAttribute="leadingMargin" id="Iu9-Se-PA9"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Yn2-gI-pwm" secondAttribute="trailing" id="OcM-gT-xIT"/>
-                                                <constraint firstItem="juK-CF-93n" firstAttribute="top" secondItem="CrF-Me-fhr" secondAttribute="top" id="Sas-PD-i8d"/>
+                                                <constraint firstItem="juK-CF-93n" firstAttribute="top" secondItem="UeG-ay-r30" secondAttribute="top" id="Sas-PD-i8d"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="jU8-tI-q7O" secondAttribute="trailing" id="c36-mV-zHP"/>
                                                 <constraint firstAttribute="trailing" secondItem="juK-CF-93n" secondAttribute="trailing" id="l5R-Oq-A9J"/>
                                                 <constraint firstItem="Yn2-gI-pwm" firstAttribute="top" secondItem="jU8-tI-q7O" secondAttribute="bottom" constant="16" id="vul-uo-eLg"/>
@@ -177,6 +185,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9VN-dX-HzZ"/>
+                    <connections>
+                        <outlet property="productsCollection" destination="ero-N5-DzO" id="gZ4-W0-n4V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHB-WO-HjS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
