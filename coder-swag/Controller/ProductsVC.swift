@@ -17,6 +17,14 @@ class ProductsVC: UIViewController {
         super.viewDidLoad()
         productsCollection.delegate = self
         productsCollection.dataSource = self
+        
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
     }
     
     func initProducts(category: Category) {

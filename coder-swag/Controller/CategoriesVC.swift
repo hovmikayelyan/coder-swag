@@ -15,6 +15,13 @@ class CategoriesVC: UIViewController {
         super.viewDidLoad()
         categoryTable.dataSource = self
         categoryTable.delegate = self
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
     }
 
 }
