@@ -15,4 +15,4 @@ Learning Objectives:
 
 Application Screenshot:
 
-<img width="1792" alt="Screen Shot 2022-08-16 at 21 13 32" src="https://user-images.githubusercontent.com/89905543/184939224-8d9ca698-a00c-4928-b1a7-3e5febc14709.png">
+<img width="1792" alt="Screen Shot 2022-08-31 at 21 06 58" src="https://user-images.githubusercontent.com/89905543/187738291-276d56f8-5753-45d2-8cce-8322ff862205.png">
